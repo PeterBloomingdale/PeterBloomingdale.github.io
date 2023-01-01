@@ -11,10 +11,13 @@ website:
         file: about.qmd
     collapse: false
   google-analytics: G-GPQF9TMB2F
+  cookie-consent: true
   page-footer:
     center: 
       - text: "Copyright &copy; 2023 PeterBloomingdale.com  "
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: minty
+      dark: cyborg
     css: styles.css

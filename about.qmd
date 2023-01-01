@@ -21,6 +21,12 @@ about:
       href: "https://scholar.google.com/citations?user=o2Iwf7QAAAAJ&hl=en&oi=ao"
 ---
 
+Pharmacometrician. Passionate about improving science.
+
+Current primary research interests (limiting myself to three) are decentralized science, generative algorithms, and science communication.
+
+Long term goal is to develop a non-profit research organization focused on technology, health, and the environment.
+
 Personal website is currently under development, but this blog is a nice quick placeholder!
 
 
