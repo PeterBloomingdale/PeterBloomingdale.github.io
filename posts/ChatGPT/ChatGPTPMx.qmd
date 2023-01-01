@@ -327,7 +327,7 @@ ___
 
 **Peter:**
 
-*Perhaps being more specific on the type of PBPK model could help. Also wondering if it was trained using the scientific literature. In one of my papers ([minimal brain PBPK model](https://link.springer.com/content/pdf/10.1007/s10928-021-09776-7.pdf?pdf=button)) I have published the [model code](https://static-content.springer.com/esm/art%3A10.1007%2Fs10928-021-09776-7/MediaObjects/10928_2021_9776_MOESM1_ESM.zip) in the supplementary information, but I doubt that was used. Lets find out. We will have to ask it to code it in MATLAB as well.
+*Perhaps being more specific on the type of PBPK model could help. Also wondering if it was trained using the scientific literature. In one of my papers ([minimal brain PBPK model](https://link.springer.com/content/pdf/10.1007/s10928-021-09776-7.pdf?pdf=button)) I have published the [model code](https://static-content.springer.com/esm/art%3A10.1007%2Fs10928-021-09776-7/MediaObjects/10928_2021_9776_MOESM1_ESM.zip) in the supplementary information, but I doubt that was used. Lets find out. We will have to ask it to code it in MATLAB as well, but lets start with R.*
 
 **In R, code a minimal brain physiologically-based pharmacokinetic (PBPK) model that can be used to to support the preclinical and clinical development of antibody therapeutics for CNS diseases**
 
@@ -380,9 +380,9 @@ ___
 
 **Peter:**
 
-*Okay, real bad... lol. It appears that the previous PBPK model that ChatGPT generated was extended to include a differential equation for the brain that has terms in both amounts and concentrations. How about MATLAB?
+*Well that was really bad... lol. It appears that the previous PBPK model that ChatGPT generated was extended to include a differential equation for the brain that has terms in both amounts and concentrations. How about MATLAB?*
 
-**In R, code a minimal brain physiologically-based pharmacokinetic (PBPK) model that can be used to to support the preclinical and clinical development of antibody therapeutics for CNS diseases**
+**In MATLAB, code a minimal brain physiologically-based pharmacokinetic (PBPK) model that can be used to to support the preclinical and clinical development of antibody therapeutics for CNS diseases**
 
 ___
 
