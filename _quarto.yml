@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Peter's Website"
+  navbar:
+    left:
+      - text: "Blog"
+        file: index.qmd
+      - text: "About Me"
+        file: about.qmd
+    collapse: false
+  google-analytics: G-GPQF9TMB2F
+  page-footer:
+    center: 
+      - text: "Copyright &copy; 2023 PeterBloomingdale.com  "
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+

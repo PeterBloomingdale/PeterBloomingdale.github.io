@@ -1,0 +1,15 @@
+---
+title: "Welcome To My Blog"
+author: "Peter Bloomingdale"
+date: "2022-12-31"
+---
+
+Hi, welcome to my first blog post. Not sure what I will write on here, but I hope you find it time worthy!
+
+I was looking for a free photo online to use in my blog and just decided to take one myself. Currently, writing this post with a nice view of the city of Boston/Cambridge, despite the gloomy weather. One thing on the to-do list is to learn how to build an image generator using AI to create my own images or use an already developed model. I'll likely start by playing around with [Stable Diffusion 2](https://github.com/Stability-AI/stablediffusion).
+
+![](Boston.jpeg)
+
+**Quarto**
+
+Over the past year, I have learned many new programming languages and softwares. Earlier this year, [Quarto](https://quarto.org/) was released. This has commonly been referred to as *"R Markdown v2.0"*. I highly recommend adding this tool to your toolbox as there are a range of useful applications. I have personally used Quarto for writing manuscripts, taking notes during online courses, documenting model/code, and creating websites (this blog!). I wish this was around when I was writing my PhD thesis!

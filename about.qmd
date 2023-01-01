@@ -1,0 +1,26 @@
+---
+title: "About Me"
+image: profilephoto-blog.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/PBloomingdale
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/peterbloomingdale/
+    - icon: github
+      text: Github
+      href: "https://github.com/PeterBloomingdale"
+    - icon: medium  
+      text: Medium
+      href: "https://medium.com/@peterbloomingdale"
+    - icon: google
+      text: Google Scholar
+      href: "https://scholar.google.com/citations?user=o2Iwf7QAAAAJ&hl=en&oi=ao"
+---
+
+Personal website is currently under development, but this blog is a nice quick placeholder!
+
+
