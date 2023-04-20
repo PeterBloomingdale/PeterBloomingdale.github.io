@@ -32,13 +32,153 @@
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "AI/ML\n\n\nPharmacometrics\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nPeter Bloomingdale\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDec 31, 2022\n\n\nPeter Bloomingdale\n\n\n\n\n\n\nNo matching items"
+    "text": "Tutorial for using OpenAI API for GPT-X Models\n\n\n\n\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\nPeter Bloomingdale\n\n\n\n\n\n\n  \n\n\n\n\nChatGPT: Applications in Pharmacometrics\n\n\n\n\n\n\n\nAI/ML\n\n\nPharmacometrics\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2023\n\n\nPeter Bloomingdale\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\n\n\n\nDec 31, 2022\n\n\nPeter Bloomingdale\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "Current primary research interests (limiting myself to three) are decentralized science, generative algorithms, and science communication.\nLong term goal is to develop a non-profit research organization focused on technology, health, and the environment.\nPersonal website is currently under development, but this blog is a nice quick placeholder!"
+    "text": "Pharmacometrician. Passionate about improving science.\nCurrent primary research interests (limiting myself to three) are decentralized science, generative algorithms, and science communication.\nLong term goal is to develop a non-profit research organization focused on technology, health, and the environment.\nPersonal website is currently under development, but this blog is a nice quick placeholder!"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html",
+    "href": "posts/gpt-api/gpt-api.html",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "",
+    "text": "Ready to explore beyond ChatGPT?…"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#openai-pai-key-and-organization-id",
+    "href": "posts/gpt-api/gpt-api.html#openai-pai-key-and-organization-id",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "OpenAI PAI Key and Organization ID",
+    "text": "OpenAI PAI Key and Organization ID\nTo use the OpenAI API, you must have an API key and Organization ID. These credentials allow you to authenticate with the API and access its features. To obtain an API key and Organization ID, follow these steps:\n\nVisit the OpenAI Developer Dashboard.\nSign up for an account or log in if you already have one.\nOnce logged in, navigate to the API Keys section.\nObtain your API key and Organization ID, as you’ll need them in the next step."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#setting-up-the-secrets.py-file",
+    "href": "posts/gpt-api/gpt-api.html#setting-up-the-secrets.py-file",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "Setting Up the secrets.py File",
+    "text": "Setting Up the secrets.py File\nAfter obtaining your API key and Organization ID, you’ll need to create a file named secrets.py in the same directory as the gpt.py file from the GitHub repository. This file will store your API credentials, allowing the Python functions to authenticate with the OpenAI API.\nTo create the secrets.py file, follow these steps:\n\nIn the same directory as the gpt.py file, create a new file and name it secrets.py.\nOpen the secrets.py file in your favorite text editor or IDE.\nDefine two variables, API_Key and Organization_ID, with your OpenAI API key and Organization ID as their respective values. Replace your_api_key_here and your_organization_id_here with the actual credentials you obtained from the OpenAI Developer Dashboard. Your secrets.py file should look like this:\n\nAPI_Key = 'your_api_key_here'\nOrganization_ID = 'your_organization_id_here'\n\nSave and close the secrets.py file\n\nNow that you have your API credentials stored in the secrets.py file, the Python functions will be able to access the OpenAI API, and you can proceed with the rest of the tutorial."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#gpt-class",
+    "href": "posts/gpt-api/gpt-api.html#gpt-class",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "GPT Class",
+    "text": "GPT Class\nThe GPT class provides a callable function, gpt(), that takes a string as input and returns the generated response from the OpenAI API as a string. This function is ideal for generating responses to single prompts or questions. The code for the GPT class is as follows:\nclass GPT:\n    def __call__(self, question):\n        model = \"gpt-3.5-turbo\" \n\n        response = openai.ChatCompletion.create( \n            model=model,\n            messages=[\n                {\"role\": \"system\", \"content\": \"You are the worlds best software engineer.\"},\n                {\"role\": \"user\", \"content\": question},\n            ],\n            temperature=0.9,\n            max_tokens=2048,\n            top_p=0.9,\n            n=1,\n        )\n\n        return response.choices[0].message.content"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#gpttxt-class",
+    "href": "posts/gpt-api/gpt-api.html#gpttxt-class",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "GPTTXT Class",
+    "text": "GPTTXT Class\nThe GPTTXT class provides a callable function, gpttxt(), that takes a file path (pointing to a .txt file) as input and returns the generated response from the OpenAI API as a string. This function is ideal for generating responses to prompts or questions contained in a text file. The code for the GPTTXT class is as follows:\nclass GPTTXT:\n    def __call__(self, input_file_path):\n        with open(input_file_path, 'r') as f:\n            input_string = f.read()\n\n        model = \"gpt-3.5-turbo\"\n\n        response = openai.ChatCompletion.create(\n            model=model,\n            messages=[\n                {\"role\": \"system\", \"content\": \"You are the worlds best software engineer.\"},\n                {\"role\": \"user\", \"content\": input_string},\n            ],\n            temperature=0.9,\n            max_tokens=300,\n            top_p=0.9,\n            n=1,\n        )\n\n        return response.choices[0].message.content"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#using-the-gpt-fucntion",
+    "href": "posts/gpt-api/gpt-api.html#using-the-gpt-fucntion",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "Using the GPT Fucntion",
+    "text": "Using the GPT Fucntion\nTo use the GPT function, follow these steps:\n\nFirst, ensure that the gpt.py file is in your project directory.\nIn your main Python script, import the gpt instance from the gpt.py file:\n\nfrom gpt import gpt\n\nCall the gpt instance with the desired input string (question or prompt). For example, to generate a response to the prompt “What is the meaning of life?”, use the following code: python\n\nresponse = gpt(\"What is the meaning of life?\")\nprint(response)"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#using-the-gpttxt-function",
+    "href": "posts/gpt-api/gpt-api.html#using-the-gpttxt-function",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "Using the GPTTXT Function",
+    "text": "Using the GPTTXT Function\nTo use the GPTTXT function, follow these steps:\n\nEnsure that the gpt.py file is in your project directory.\nIn your main Python script, import the gpttxt instance from the gpt.py file:\n\nfrom gpt import gpttxt\n\nInsert text of interest into the input.txt file\nCall the gpttxt instance with the name of the text file as its argument. For example, to generate a response based on the content of the input.txt file, use the following code:\n\nresponse = gpttxt('input.txt')\nprint(response)\nNote that instead of creating and printing a variable (e.g. response), you can directly use the function in the terminal."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#available-models",
+    "href": "posts/gpt-api/gpt-api.html#available-models",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "Available Models",
+    "text": "Available Models\nOpenAI offers several GPT models that you can use with the API. Each model has its own characteristics and capabilities. Some available models are:\n\ngpt-3.5-turbo: The most advanced model, offering excellent response quality and speed. This model is recommended for most use cases.\ntext-davinci-002: A powerful model that can generate high-quality responses but is slower and more expensive than gpt-3.5-turbo.\ntext-curie-002: A model that offers a balance between response quality and cost.\ntext-babbage-002: A model that generates good responses at a lower cost, suitable for applications with tight budgets.\ntext-ada-002: The lowest-cost model that still produces reasonable responses, ideal for cost-sensitive applications.\n\nYou can find more information about the available models in OpenAI API model documentation."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#configuring-the-gpt-and-gpttxt-functions",
+    "href": "posts/gpt-api/gpt-api.html#configuring-the-gpt-and-gpttxt-functions",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "Configuring the gpt() and gpttxt() Functions",
+    "text": "Configuring the gpt() and gpttxt() Functions\nBy default, both functions use the gpt-3.5-turbo model, which is recommended for most use cases. However, you can easily change the model used by these functions to suit your specific needs.\nTo change the model, modify the model variable in the __call__ method of the GPT and GPTTXT classes in the gpt.py file. For example, to use the text-curie-002 model, change the following lines:\nIn the GPT and GPTTXT classes:\nmodel = \"gpt-3.5-turbo\"\nto\nmodel = \"text-curie-002\"\nAfter making these changes, the gpt() and gpttxt() functions will use the specified model when making requests to the OpenAI API."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#openai-api-key-and-organization-id",
+    "href": "posts/gpt-api/gpt-api.html#openai-api-key-and-organization-id",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "OpenAI API Key and Organization ID",
+    "text": "OpenAI API Key and Organization ID\nTo use the OpenAI API, you must have an API key and Organization ID. These credentials allow you to authenticate with the API and access its features. To obtain an API key and Organization ID, follow these steps:\n\nVisit the OpenAI Developer Dashboard.\nSign up for an account or log in if you already have one.\nOnce logged in, navigate to the API Keys section.\nObtain your API key and Organization ID, as you’ll need them in the next step."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#prerequisites",
+    "href": "posts/gpt-api/gpt-api.html#prerequisites",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore diving into the tutorial, there are a few prerequisites you’ll need to fulfill in order to successfully use the Python functions provided in the GitHub repository to access the OpenAI API.\n\nOpenAI API Key and Organization ID\nTo use the OpenAI API, you must have an API key and Organization ID. These credentials allow you to authenticate with the API and access its features. To obtain an API key and Organization ID, follow these steps:\n\nVisit the OpenAI Developer Dashboard.\nSign up for an account or log in if you already have one.\nOnce logged in, navigate to the API Keys section.\nObtain your API key and Organization ID, as you’ll need them in the next step.\n\n\n\nSetting Up the secrets.py File\nAfter obtaining your API key and Organization ID, you’ll need to create a file named secrets.py in the same directory as the gpt.py file from the GitHub repository. This file will store your API credentials, allowing the Python functions to authenticate with the OpenAI API.\nTo create the secrets.py file, follow these steps:\n\nIn the same directory as the gpt.py file, create a new file and name it secrets.py.\nOpen the secrets.py file in your favorite text editor or IDE.\nDefine two variables, API_Key and Organization_ID, with your OpenAI API key and Organization ID as their respective values. Replace ‘your_api_key_here’ and ‘your_organization_id_here’ with the actual credentials you obtained from the OpenAI Developer Dashboard. Your secrets.py file should look like this:\n\nAPI_Key = 'your_api_key_here'\nOrganization_ID = 'your_organization_id_here'\n\nSave and close the secrets.py file\n\nNow that you have your API credentials stored in the secrets.py file, the Python functions will be able to access the OpenAI API, and you can proceed with the rest of the tutorial."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#python-functions-overview",
+    "href": "posts/gpt-api/gpt-api.html#python-functions-overview",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Python Functions Overview",
+    "text": "Python Functions Overview\nIn this section, we’ll go over the two primary functions provided in the gpt.py file: gpt() and gpttxt(). These functions allow you to interact with the OpenAI API to generate responses from the GPT model.\n\nGPT Class\nThe GPT class provides a callable function, gpt(), that takes a string as input and returns the generated response from the OpenAI API as a string. This function is ideal for generating responses to single prompts or questions. The code for the GPT class is as follows:\nclass GPT:\n    def __call__(self, question):\n        model = \"gpt-3.5-turbo\" \n\n        response = openai.ChatCompletion.create( \n            model=model,\n            messages=[\n                {\"role\": \"system\", \"content\": \"You are the worlds best software engineer.\"},\n                {\"role\": \"user\", \"content\": question},\n            ],\n            temperature=0.9,\n            max_tokens=2048,\n            top_p=0.9,\n            n=1,\n        )\n\n        return response.choices[0].message.content\n\n\nGPTTXT Class\nThe GPTTXT class provides a callable function, gpttxt(), that takes a file path (pointing to a .txt file) as input and returns the generated response from the OpenAI API as a string. This function is ideal for generating responses to prompts or questions contained in a text file. The code for the GPTTXT class is as follows:\nclass GPTTXT:\n    def __call__(self, input_file_path):\n        with open(input_file_path, 'r') as f:\n            input_string = f.read()\n\n        model = \"gpt-3.5-turbo\"\n\n        response = openai.ChatCompletion.create(\n            model=model,\n            messages=[\n                {\"role\": \"system\", \"content\": \"You are the worlds best software engineer.\"},\n                {\"role\": \"user\", \"content\": input_string},\n            ],\n            temperature=0.9,\n            max_tokens=300,\n            top_p=0.9,\n            n=1,\n        )\n\n        return response.choices[0].message.content"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#using-the-functions",
+    "href": "posts/gpt-api/gpt-api.html#using-the-functions",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Using the Functions",
+    "text": "Using the Functions\nIn this section, we’ll demonstrate how to use the gpt() and gpttxt() functions from the gpt.py file to generate responses from the OpenAI API.\n\nThe gpt() Function\nTo use the gpt() function, follow these steps:\n\nFirst, ensure that the gpt.py file is in your project directory.\nIn your main Python script or terminal, import the gpt instance from the gpt.py file:\n\nfrom gpt import gpt\n\nCall the gpt() function with the desired input string (question or prompt). For example, to generate a response to the prompt “What is the meaning of life?”, use the following code:\n\nresponse = gpt(\"What is the meaning of life?\")\nprint(response)\n\n\nThe gpttxt() Function\nTo use the gpttxt() function, follow these steps:\n\nEnsure that the gpt.py file is in your project directory.\nIn your main Python script or terminal, import the gpttxt instance from the gpt.py file:\n\nfrom gpt import gpttxt\n\nInsert text of interest into the input.txt file\nCall the gpttxt() function with the name of the text file as its argument. For example, to generate a response based on the content of the input.txt file, use the following code:\n\nresponse = gpttxt('input.txt')\nprint(response)\nNote that instead of creating and printing a variable (e.g. response), you can directly use the function in the terminal."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#choosing-the-right-model",
+    "href": "posts/gpt-api/gpt-api.html#choosing-the-right-model",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Choosing the Right Model",
+    "text": "Choosing the Right Model\nWhen using the OpenAI API, it’s essential to choose the right model to generate high-quality responses. In this section, we’ll discuss how to select the appropriate model for your use case and how to configure the gpt() and gpttxt() functions to use the chosen model.\n\nAvailable Models\nOpenAI offers several GPT models that you can use with the API. Each model has its own characteristics and capabilities. Some available models are:\n\ngpt-3.5-turbo: The most advanced model, offering excellent response quality and speed. This model is recommended for most use cases.\ntext-davinci-002: A powerful model that can generate high-quality responses but is slower and more expensive than gpt-3.5-turbo.\ntext-curie-002: A model that offers a balance between response quality and cost.\ntext-babbage-002: A model that generates good responses at a lower cost, suitable for applications with tight budgets.\ntext-ada-002: The lowest-cost model that still produces reasonable responses, ideal for cost-sensitive applications.\n\nYou can find more information about the available models in OpenAI API model documentation.\n\n\nDefining the GPT-X Model to Use\nBy default, both functions use the gpt-3.5-turbo model, which is recommended for most use cases. However, you can easily change the model used by these functions to suit your specific needs.\nTo change the model, modify the model variable in the __call__ method of the GPT and GPTTXT classes in the gpt.py file. For example, to use the text-curie-002 model, change the following lines:\nIn the GPT and GPTTXT classes:\nmodel = \"gpt-3.5-turbo\"\nto\nmodel = \"text-curie-002\"\nAfter making these changes, the gpt() and gpttxt() functions will use the specified model when making requests to the OpenAI API."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#customizing-api-settings",
+    "href": "posts/gpt-api/gpt-api.html#customizing-api-settings",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Customizing API Settings",
+    "text": "Customizing API Settings\nIn this section, we’ll briefly cover how to customize API settings to fine-tune the behavior of the gpt() and gpttxt() functions when making requests to the OpenAI API. Each of the following parameters can be adjusted within the openai.ChatCompletion.create method.\n\ntemperature: Controls the creativity of the generated responses. Higher values result in more randomness, while lower values make responses more focused and deterministic.\nmax_tokens: Controls the length of generated responses. Set a higher value for longer responses or a lower value for shorter responses.\ntop_p: Controls the diversity of generated responses. Lower values promote more diverse responses by filtering out less probable tokens.\nn: Generates n number of responses. Useful if multiple responses are desired.\npresence_penalty: Discourages the model from repeating previous responses by penalizing tokens that have already been generated in the conversation. Higher values reduce repetition. Default is 0, ranges between 0-1.\nfrequency_penalty: Encourages the model to generate more varied responses by penalizing tokens that have been used frequently in the conversation. Higher values reduce the frequency of common phrases. Default is 0, ranges between 0-1.\nstop: A list of tokens that, when generated by the model, indicate that the response is complete and the model should stop generating additional tokens.\necho: A boolean parameter that, when set to True, causes the model to include the user’s message in its response.\nprompt_token: A string that is added at the beginning of the user’s message when the echo parameter is True. This can be useful for formatting the output or providing additional context to the model.\nresponse_prefix: A string that is added to the beginning of the model’s response. This can be useful for formatting the output or separating multiple responses when n is greater than 1."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#responsible-use-and-disclaimer",
+    "href": "posts/gpt-api/gpt-api.html#responsible-use-and-disclaimer",
+    "title": "Tutorial for using OpenAI API for GPT-x Models",
+    "section": "Responsible Use and Disclaimer",
+    "text": "Responsible Use and Disclaimer"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#conclusion",
+    "href": "posts/gpt-api/gpt-api.html#conclusion",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Conclusion",
+    "text": "Conclusion\nHope this was helpful!\nIf you made it this far, a hot topic right now is AutoGPTs, which I think the buzz has not hit mainstream just yet. In short, I view this as a novel architecturial design linking up multiple LLMs together that creates an “emergent-like” behavior to solve tasks.\nAuto-GPTs can also be defined as seamlessly connecting LLM “thoughts” to autonomously accomplish any objective you assign.\nThe Paper and Twitter post that started it all:\n\nAutoGPT Paper\nTwitter Post\n\nA few very fast growing GitHub projects emerged around this concept:\n\n\nSignificant-Gravitas/Auto-GPT\nreworkd/AgentGPT\nyoheinakajima/babyagi\n\n\nMusic Currently on Repeat: Gaming Chill Music"
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#introduction",
+    "href": "posts/gpt-api/gpt-api.html#introduction",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Introduction",
+    "text": "Introduction\nOpenAI’s GPT models are state-of-the-art language models that have revolutionized the field of natural language processing.\nThis tutorial provides a guide for using simple and easy to use Python functions to interact with the OpenAI API, enabling you to harness the power of GPT models directly in your IDE terminal and build into your own products."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#customizing-system-content-prompt",
+    "href": "posts/gpt-api/gpt-api.html#customizing-system-content-prompt",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Customizing System Content Prompt",
+    "text": "Customizing System Content Prompt\nIn the API request, you’ll notice that there is a system content prompt which is defined as:\nmessages=[\n    {\"role\": \"system\", \"content\": \"You are the worlds best software engineer.\"},\n    {\"role\": \"user\", \"content\": question},\n],\nThe system content prompt provides initial context or instructions for the AI model. In this case, the prompt is set to “You are the worlds best software engineer,” which helps set the tone and context for the AI’s response. It informs the AI model to respond as if it is an expert in software engineering.\nYou can customize the system content prompt to better suit your needs or to set a different context for the AI model. For example, if you want the AI to respond as a knowledgeable data scientist, you can change the system content message to:\n{\"role\": \"system\", \"content\": \"You are an expert data scientist.\"},\nOr, if you want the AI to provide beginner-friendly explanations, you can change the message to:\n{\"role\": \"system\", \"content\": \"You are a software engineer who explains complex topics in simple terms.\"},\nTo modify the system content prompt, simply replace the content value in the messages list with your desired context or instruction. Keep in mind that the AI’s response may vary depending on the context provided, so it’s essential to test and refine your prompt to achieve the desired output."
+  },
+  {
+    "objectID": "posts/gpt-api/gpt-api.html#obtain-the-code",
+    "href": "posts/gpt-api/gpt-api.html#obtain-the-code",
+    "title": "Tutorial for using OpenAI API for GPT-X Models",
+    "section": "Obtain the Code",
+    "text": "Obtain the Code\nThe code used in this blog post can be accessed in my GitHub Repo:\nPeterBloomingdale/gpt"
   }
 ]
