@@ -67,7 +67,7 @@
     "href": "posts/gpt-api/gpt-api.html#conclusion",
     "title": "Tutorial for using OpenAI API for GPT-X Models",
     "section": "Conclusion",
-    "text": "Conclusion\nHope this was helpful!\nIf you made it this far, a hot topic right now is AutoGPTs, which I think the buzz has not hit mainstream just yet. In short, I view this as a novel architecturial design linking up multiple LLMs together that creates an “emergent-like” behavior to solve tasks.\nAuto-GPTs can also be defined as seamlessly connecting LLM “thoughts” to autonomously accomplish any objective you assign.\nThe Paper and Twitter post that started it all:\n\nAutoGPT Paper\nTwitter Post\n\nA few very fast growing GitHub projects emerged around this concept:\n\n\nSignificant-Gravitas/Auto-GPT\nreworkd/AgentGPT\nyoheinakajima/babyagi\n\n\nMusic Currently on Repeat: Gaming Chill Music"
+    "text": "Conclusion\nHope this was helpful!\nIf you made it this far, a hot topic right now is AutoGPTs, which I think the buzz has not hit mainstream just yet. In short, I currently view AutoGPTs as novel architectural designs linking up multiple LLMs together to create an “emergent-like” behavior to solve tasks.\nAuto-GPTs can also be defined as seamlessly connecting LLM “thoughts” to autonomously accomplish any objective you assign.\nThe Paper and Twitter post that started it all:\n\nAutoGPT Paper\nTwitter Post\n\nA few very fast growing GitHub projects emerged around this concept:\n\n\nSignificant-Gravitas/Auto-GPT\nreworkd/AgentGPT\nyoheinakajima/babyagi\n\n\nMusic Currently on Repeat: Gaming Chill Music"
   },
   {
     "objectID": "posts/welcome/index.html",
