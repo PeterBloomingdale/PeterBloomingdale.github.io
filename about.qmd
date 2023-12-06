@@ -4,29 +4,31 @@ image: profilephoto-blog.jpg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/PBloomingdale
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/peterbloomingdale/
     - icon: github
       text: Github
       href: "https://github.com/PeterBloomingdale"
-    - icon: medium  
-      text: Medium
-      href: "https://medium.com/@peterbloomingdale"
     - icon: google
       text: Google Scholar
       href: "https://scholar.google.com/citations?user=o2Iwf7QAAAAJ&hl=en&oi=ao"
 ---
 
-Pharmacometrician. Passionate about improving science.
+Pharmacometrician. Passionate about improving science. Long term goal is to develop a non-profit research organization focused on science, technology, health, and the environment.
 
-Current primary research interests (limiting myself to three) are decentralized science, generative algorithms, and science communication.
+Currently (Dec 2023) I am...
 
-Long term goal is to develop a non-profit research organization focused on technology, health, and the environment.
+**Researching**: Generative AI, Pharmacometric Operations, and Science Communication
 
-Personal website is currently under development, but this blog is a nice quick placeholder!
+**Learning**: Software Engineering via Meta Coursera Courses
 
+**Listening**: My First Million (MFM), Indie Hackers, How I Built This
 
+**Playing**: Teamfight Tactics and Warcraft Rumble
+
+**Reading**: *Designing Data-Intensive Applications (by Martin Kleppmann)* and *Designing Machine Learning Systems (by Chip Huyen)*
+
+<a href="https://www.amazon.com/dp/1449373321?&linkCode=li2&tag=peterblooming-20&linkId=5d9909080a89dd81ae1c417081f2b319&language=en_US&ref_=as_li_ss_il" target="_blank" style="inline-link"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1449373321&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=peterblooming-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=peterblooming-20&language=en_US&l=li2&o=1&a=1449373321" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<a href="https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969?crid=3NQDA9FYXZ0S4&keywords=machine+learning+book&qid=1701713348&sprefix=machine+learning%2Caps%2C221&sr=8-6&linkCode=li2&tag=peterblooming-20&linkId=5b6438624f90bfd2fd970a38239a9a9d&language=en_US&ref_=as_li_ss_il" target="_blank" class="inline-link"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1098107969&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=peterblooming-20&language=en_US" ></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=peterblooming-20&language=en_US&l=li2&o=1&a=1098107969" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
