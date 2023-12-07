@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/PMxGPT/PMxGPT.html",
       "/posts/gpt-api/gpt-api.html",
       "/posts/ChatGPT/ChatGPTPMx.html",
       "/posts/welcome/index.html"
