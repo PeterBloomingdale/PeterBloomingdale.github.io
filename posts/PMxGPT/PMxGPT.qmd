@@ -7,12 +7,6 @@ categories: [AI/ML, Pharmacometrics]
 image: "PMxGPT.png"
 ---
 
-## Access to PMxGPT
-
-Access PMxGPT by clicking the photo below. You currently need a ChatGPT Plus subscription.
-
-[![](PMxGPT_Screenshot2.png)](https://chat.openai.com/g/g-TTwJWzb5w-pmxgpt)
-
 ## TLDR
 
 Well it's not banana bread at work, but it's the first version of a domain-specific GPT for pharmacometrics. Hell yeah!
@@ -24,6 +18,12 @@ To exemplify the power of this I created a custom version of ChatGPT for pharmac
 PMxGPT was useful for answering questions on brain PBPK modeling and supporting model development through providing parameter values and code. However, there is clear room for improvement.
 
 The key to a usable custom LLM for pharmacometrics will be access to high quality open-source training data, which is currently lacking in the field. Standardization of model code, parameter/equation nomenclature, and adequate model documentation are paramount prerequisites.
+
+## Access to PMxGPT
+
+Access PMxGPT by clicking the photo below. You currently need a ChatGPT Plus subscription.
+
+[![](PMxGPT_Screenshot2.png)](https://chat.openai.com/g/g-TTwJWzb5w-pmxgpt)
 
 ## Model Customization
 
